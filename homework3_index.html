@@ -1,0 +1,43 @@
+<html>
+
+    <head>
+        <script>
+
+            var count = 0
+
+            function AddAnimal() {
+
+                var animal = document.getElementById('input1').value;
+                var item = "<li>" + animal + "</li>";
+
+                document.getElementById("list1").insertAdjacentHTML('beforeend', item);
+                document.getElementById('input1').value = "";
+
+                count = count + 1;
+                document.getElementById('span1').innerHTML = count
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <h1>
+            Your list of Animals
+        </h1>
+                      
+        <input id="input1" type="text" />
+                      
+        <button id="button1" onclick="AddAnimal()">
+            enter an animal
+        </button>
+                      
+        <h4>
+            Number of animals in your list: <span id="span1"></span>
+        </h4>
+                      
+        <ul id="list1">
+                      
+        </ul>                           
+    </body>
+
+</html>
